@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <title>Array Traversing</title>
+    <script>
+         let data = [10,4,6,33,94,34,55,73,85];
+        // for(let i=0; i<data.length; i++){
+        //     document.write(`Array ${i} is ${data[i]} <br> `);
+        // };
+        function getElement(){
+            let element = document.getElementById("element").value;
+            if(element<data.length){
+
+                alert(data[element]);
+            }
+            else{
+                alert("enter valid value");
+            }
+        }
+        console.log(data[3]);
+    </script>
+</head>
+<body>
+    <input type="text" id="element"/>
+    <button onclick="getElement()">Get Element</button>
+</body>
+</html>

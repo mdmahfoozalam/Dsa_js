@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <title>Indirect recursion</title>
+    <script>
+        let money =100;
+        let apple=0;
+        function buyApple(x){
+            if(x>0){
+                console.log("I have", x ,"RS and total apple",apple);
+                buyMore(x);
+            }
+            else{
+                console.log("I don't have enough money",apple);
+            }
+        }
+
+        function buyMore(x){
+            apple++;
+            buyApple(x-10);
+        }
+        buyApple(money);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

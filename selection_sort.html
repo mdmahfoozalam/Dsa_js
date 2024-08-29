@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <title>Selection sort</title>
+    <script>
+        let item = [20,50,15,35,78,96,10,13];
+        for(let i=0;i<item.length;i++){
+            let minPos=i;
+            for(let j=i+1;j<item.length;j++){
+                if(item[j]<item[minPos]){
+                    minPos=j;
+                }
+            }
+            let temp=item[minPos];
+            item[minPos]=item[i];
+            item[i]=temp;
+        }
+        console.log(item);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

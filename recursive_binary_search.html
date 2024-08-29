@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <title>Binary seach with recursion</title>
+    <script>
+        let data =[10,18,20,28,30,35,40,46,78];
+        let start=0;
+        let end= data.length-1;
+        let find=40;
+        let pos=undefined;
+        function recursiveBinary(data,start,end){
+            let mid = Math.floor((start+end)/2);
+            if(data[mid]==find){
+                pos=mid;
+                return true;
+            }
+            else if(data[mid]<find){
+                recursiveBinary(data,mid+1,end);
+            }
+            else{
+                recursiveBinary(data,start,mid-1);
+            }
+        }
+        recursiveBinary(data,start,end);
+        console.log("element found at",pos);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

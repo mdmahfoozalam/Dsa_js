@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <title>Checking Anagram</title>
+    <script>
+        function checkAnagram(str1, str2){
+            let objStr1={};
+            if(str1.length!=str2.length){
+                return false;
+            }
+            for(char of str1){
+                objStr1[char]=(objStr1[char]||0)+1
+            }
+            for(ch of str2){
+                if(!objStr1[ch]){
+                    return false;
+                }
+                objStr1[ch]--;
+            }
+            return true;
+        }
+        console.log(checkAnagram("hello","ehool")); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

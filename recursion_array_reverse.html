@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <title>Reverse Array using recursion</title>
+    <script>
+        let data = [5,45,64,23,645,7];
+        let temp;
+        function customReverse(data,start,end){
+            console.log(data);
+            if(start<=end){
+                temp=data[start];
+                data[start]=data[end];
+                data[end]=temp;
+                customReverse(data,start+1,end-1);
+            }
+        }
+        customReverse(data,0,data.length-1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

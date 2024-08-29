@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <title>Delete Array Element</title>
+    <script>
+        function takePosition(){
+            let data = [20,50,40,60,90];
+            console.log(data);
+            let pos =parseInt(document.getElementById("pos").value);
+            for(let i = pos; i<data.length-1;i++){
+                data[i]=data[i+1];
+            }
+            data.length=data.length-1;
+            console.log(data);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="pos" />
+    <button onclick="takePosition()">Enter Position</button>
+</body>
+</html>

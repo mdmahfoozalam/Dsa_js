@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <title>Binary search with iterative approach</title>
+    <script>
+        let data= [10,14,18,20,39,40,49,50]; // for binary search array should be sorted
+        let find = 40;
+        let start=0;
+        let end = data.length-1;
+        let pos= undefined;
+        while(start<=end){
+            let mid =Math.floor((start+end)/2);
+            if(data[mid]==find){
+                pos=mid;
+                break;
+            }
+            else if(data[mid]<find){
+                start=mid+1;
+            }
+            else{
+                end=mid-1;
+            }
+        }
+        console.log(pos);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

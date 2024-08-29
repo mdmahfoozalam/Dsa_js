@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <title>Check Palindrome</title>
+    <script>
+        let string ="abccba";
+        let result=true;
+        let start=0;
+        let end=string.length-1;
+        while(end>start){
+            if(string[start]!=string[end]){
+                result=false;
+                break;
+            }
+            start++;
+            end--;
+        }
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

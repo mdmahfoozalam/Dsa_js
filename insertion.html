@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <title>Insertion Sort</title>
+    <script>
+        let data=[49,29,58,27,40,18,10,19];
+        let current, i, j;
+        for (i=1;i<data.length;i++){
+            current=data[i];
+            j=i-1;
+            while(j>=0 && data[j]>current){
+                data[j+1]=data[j];
+                j=j-1;
+            }
+            data[j+1]=current;
+        }
+        console.log(data);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

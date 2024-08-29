@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <title>Maximum occuring character</title>
+    <script>
+        let text= "hello world";
+        let maxKey='';
+        let objStr={};
+        //console.log(text[1]);
+        for(let i=0;i<text.length;i++){
+            let key=text[i];
+            if(!objStr[key]){
+                objStr[key]=0;
+            }
+            objStr[key]++;
+            if(maxKey == ''||objStr[key]>objStr[maxKey]){
+                maxKey=key;
+            }
+        }
+        console.log(maxKey);
+        console.log(objStr);
+        console.log("max value",objStr[maxKey]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

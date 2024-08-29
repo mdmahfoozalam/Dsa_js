@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <title>Queue</title>
+    <script>
+        let data=[];
+        let currentSize=data.length;
+        let max=5;
+        function enqueue(item){
+            if(currentSize<max){
+                data[currentSize]=item;
+                currentSize++;
+            }
+            else{
+                alert("queue is full");
+            }
+        }
+        function display(){
+            console.log(data);
+        }
+        function dequeue(){
+            if(currentSize>0){
+                for(let i=0;i<data.length;i++){
+                    data[i]=data[i+1];
+                }
+                currentSize--;
+                data.length=currentSize;
+            }
+            else{
+                alert("queue is empty");
+            }
+        }
+        enqueue(10);
+        enqueue(20);
+        enqueue(30);
+        display();
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
